@@ -1,4 +1,4 @@
-#include "class/classes/nbern014/lab-01/header/rectangle.hpp"
+#include "/class/classes/nbern014/lab-01/header/rectangle.hpp"
 
 void Rectangle::set_width(int w){
 	this->width = w;
