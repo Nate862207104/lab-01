@@ -1,14 +1,17 @@
-#include "header/c-echo.h"
-
+#include "c-echo.h"
 #include "gtest/gtest.h"
 
-TEST(EchoTest , HelloWorld) {
+TEST(EchoTest, HelloWorld) {
 	char* test_val[3];
 	test_val[0]= "./c-echo";
 	test_val[1] = "hello";
-	test_val[2] = "world";
-	EXPECT_EQ("hello world" , echo(3, test_val));
+	test_val[2] = "world\n";
+	EXPECT_EQ("hello world\n" , echo(3, test_val));
 
+}
+TEST(EchoTest, EmptyString) {
+    char* test_val[1]; test_val[0] = "./c-echo";
+    EXPECT_EQ("", echo(1,test_val));
 }
 
 int main(int argc, char **argv) {
